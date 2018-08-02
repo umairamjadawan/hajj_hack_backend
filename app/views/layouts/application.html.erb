@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Galileo</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    <!-- Styling for theme -->
+    <%= stylesheet_link_tag 'theme/material-dashboard.css?v=2.1.0', 'data-turbolinks-track': 'reload' %>
+    <!-- Basic JS for theme -->
+    <%= javascript_include_tag 'theme/jquery.min', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'theme/popper.min', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'theme/bootstrap-material-design.min', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'theme/perfect-scrollbar.jquery.min', 'data-turbolinks-track': 'reload' %>
+    <!--  Google Maps Plugin    -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
+    <!-- Chartist JS -->
+    <%= javascript_include_tag 'theme/chartist.min', 'data-turbolinks-track': 'reload' %>
+    <!--  Notifications Plugin    -->
+    <%= javascript_include_tag 'theme/bootstrap-notify', 'data-turbolinks-track': 'reload' %>
+    <!-- Control Center for Material Dashboard: parallax effects, scripts for the example pages etc -->
+    <%= javascript_include_tag 'theme/material-dashboard', 'data-turbolinks-track': 'reload' %>
+
+    <!--     Fonts and icons     -->
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
+
+  </head>
+
+  <body>
+
+    <div class="wrapper ">
+
+      <% if notice %>
+        <p class="alert alert-success"><%= notice %></p>
+      <% end %>
+      <% if alert %>
+        <p class="alert alert-danger"><%= alert %></p>
+      <% end %>
+
+
+
+
+      <div class="sidebar" data-color="green" data-background-color="white" data-image="/assets/theme/sidebar-1.jpg">
+        <!--
+          Tip 1: You can change the color of the sidebar using: data-color="purple | azure | green | orange | danger"
+
+          Tip 2: you can also add an image using data-image tag
+      -->
+        <div class="logo">
+          <a href="/" class="simple-text logo-normal">
+            Galileo
+          </a>
+        </div>
+        <div class="sidebar-wrapper">
+          <ul class="nav">
+            <li class="nav-item active  ">
+              <a class="nav-link" href="./dashboard.html">
+                <i class="material-icons">dashboard</i>
+                <p>Dashboard</p>
+              </a>
+            </li>
+            <li class="nav-item ">
+              <a class="nav-link" href="./user.html">
+                <i class="material-icons">person</i>
+                <p>User Profile</p>
+              </a>
+            </li>
+            <li class="nav-item ">
+              <a class="nav-link" href="./tables.html">
+                <i class="material-icons">content_paste</i>
+                <p>Table List</p>
+              </a>
+            </li>
+            <li class="nav-item ">
+              <a class="nav-link" href="./typography.html">
+                <i class="material-icons">library_books</i>
+                <p>Typography</p>
+              </a>
+            </li>
+            <li class="nav-item ">
+              <a class="nav-link" href="./icons.html">
+                <i class="material-icons">bubble_chart</i>
+                <p>Icons</p>
+              </a>
+            </li>
+            <li class="nav-item ">
+              <a class="nav-link" href="./map.html">
+                <i class="material-icons">location_ons</i>
+                <p>Maps</p>
+              </a>
+            </li>
+            <li class="nav-item ">
+              <a class="nav-link" href="./notifications.html">
+                <i class="material-icons">notifications</i>
+                <p>Notifications</p>
+              </a>
+            </li>
+            <!-- <li class="nav-item active-pro ">
+                  <a class="nav-link" href="./upgrade.html">
+                      <i class="material-icons">unarchive</i>
+                      <p>Upgrade to PRO</p>
+                  </a>
+              </li> -->
+          </ul>
+        </div>
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+      <div class="main-panel">
+
+
+        <div class="content">
+          <div class="container-fluid">
+            <%= yield %>
+          </div>
+        </div>
+
+
+
+
+
+
+
+        <footer class="footer">
+          <div class="container-fluid">
+            <nav class="float-left">
+              <ul>
+                <li>
+                  <a href="https://www.creative-tim.com">
+                    Creative Tim
+                  </a>
+                </li>
+                <li>
+                  <a href="https://creative-tim.com/presentation">
+                    About Us
+                  </a>
+                </li>
+                <li>
+                  <a href="http://blog.creative-tim.com">
+                    Blog
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.creative-tim.com/license">
+                    Licenses
+                  </a>
+                </li>
+              </ul>
+            </nav>
+            <div class="copyright float-right">
+              &copy;
+              <script>
+                  document.write(new Date().getFullYear())
+              </script>, made with <i class="material-icons">favorite</i> by
+              <a href="https://www.creative-tim.com" target="_blank">Creative Tim</a> for a better web.
+            </div>
+          </div>
+        </footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+    </div>
+
+  </body>
+</html>
