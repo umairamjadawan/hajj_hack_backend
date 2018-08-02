@@ -18,6 +18,7 @@ ActiveAdmin.register Location do
   filter :title
   filter :details
   filter :time
+  filter :language
 
   index do
     selectable_column
@@ -29,6 +30,7 @@ ActiveAdmin.register Location do
     column :notification_message
     column :radius
     column :sequence_number
+    column :language
     actions
   end
 
